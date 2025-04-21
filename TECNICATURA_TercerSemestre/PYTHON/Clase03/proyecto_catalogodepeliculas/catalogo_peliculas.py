@@ -16,7 +16,7 @@ class CatalogoPeliculas:
                 for linea in archivo:
                     print(f"- {linea.strip()}")
         else:
-            print("No hay películas registradas.")
+            print("No hay peliculas registradas.")
 
     @staticmethod
     def eliminar():
