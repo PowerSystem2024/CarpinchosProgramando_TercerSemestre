@@ -1,5 +1,4 @@
 import os
-
 class CatalogoPeliculas:
     ruta_archivo = 'peliculas.txt'
 
@@ -7,7 +6,6 @@ class CatalogoPeliculas:
     def agregar_pelicula(pelicula):
         with open(CatalogoPeliculas.ruta_archivo, 'a', encoding='utf-8') as archivo:
             archivo.write(pelicula.nombre + '\n')
-
     @staticmethod
     def listar_peliculas():
         if os.path.exists(CatalogoPeliculas.ruta_archivo):
