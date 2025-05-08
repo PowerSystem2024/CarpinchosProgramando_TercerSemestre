@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <img src="./assets/PPTCP.png" alt="Piedra Papel Tijera" width="400" height="300"/>
+    <title>Piedra, papel y tijera</title>
+    <script>
+
+        function obtenerNumeroAleatorio(min, max) { //Los parametros deben ser entre 1 y 3
+        return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+
+        // 1 será piedra  2 será papel  3 será tijera
+        let jugador = 0
+        let pc = obtenerNumeroAleatorio(1,3)
+        jugador = prompt("Elige : 1 piedra, 2 papel, 3 tijera")
+
+        //alert("Elije jugador"+jugador)
+
+        if(jugador == 1){
+            alert("Elegiste piedra")
+        } else if (jugador == 2){
+            alert("Elegiste papel")
+        } else if(jugador == 3){
+            alert("Elegiste tijera")
+        } else {
+            alert("Elegiste perder")
+        }
+
+        
+        if(pc == 1){
+            alert("La PC eligió piedra");
+        } else if(pc == 2){
+            alert("La PC eligió papel");
+        } else {
+            alert("La PC eligió tijera");
+        }
+
+        //Combate
+        if(jugador == pc){
+            alert("EMPATE");
+        } else if((jugador == 1 && pc == 3) || (jugador == 2 && pc == 1) || (jugador == 3 && pc == 2)){
+            alert("GANASTE");
+        } else {
+            alert("PERDISTE");
+        }
+    </script>
+</head>
+<body>
+    <h1>Piedra, Papel y Tijera</h1>
+</body>
+</html>
