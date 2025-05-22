@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Avatar: La Leyenda de Aang</title>
+    <style>
+ 
+    </style>
+</head>
+<body>
+    <h1>🔥💨⛰️💧</h1>
+
+    <section id="seleccionar-personaje">
+        <div class="contenedor-principal">
+            <h2>Selecciona tu personaje</h2>
+
+            <div class="personajes-container">
+                <div class="personaje">
+                    <p>Zuko</p>
+                    <img src="assets/Zuko.jpg" alt="Zuko">
+                    <br>
+                    <input type="radio" name="personaje" id="zuko"/>
+                    <label for="zuko"></label>
+                </div>
+                <div class="personaje">
+                    <p>Katara</p>
+                    <img src="assets/Katara.jpg" alt="Katara">
+                    <br>
+                    <input type="radio" name="personaje" id="katara"/>
+                    <label for="katara"></label>
+                </div>
+                <div class="personaje">
+                    <p>Aang</p>
+                    <img src="assets/Aang.jpg" alt="Katara"/>
+                    <br>
+                    <input type= "radio" name="personaje" id="aang"/>
+                    <label for="aang"></label>
+                </div>
+                <div class="personaje">
+                    <p>Toph</p>
+                    <img src="assets/Toph.jpg" id="toph">
+                    <br>
+                    <input type="radio" name="personaje" id="toph"/>
+                    <label for="toph"></label>
+                </div>
+            </div>
+
+            <div class="boton-container">
+                <button id="boton-personaje">Seleccionar</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="seleccionar-ataque">
+        <h2>Elige tu ataque</h2>
+        <p>Tu personaje tiene <span>3</span> vidas</p>
+        <p>Los personajes de tu enemigo tienen <span>3</span> vidas</p>
+        <p>
+            <button id="boton-fuego">Fuego 🔥</button>
+            <button id="boton-agua">Agua💧</button>
+            <button id="boton-tierra">Tierra ⛰️</button>
+            <button id="boton-aire">Aire 💨</button>
+        </p>
+    </section>
+
+    <section id="mensajes">
+        <p>Tu personaje atacó con todo el poder del FUEGO, el personaje del enemigo atacó con medio poder de TIERRA - GANASTE 🤩</p>
+    </section>
+
+    <section id="reiniciar">
+        <button id="boton-reiniciar">Reiniciar</button>
+    </section>
+
+    <script src="avatar.js"></script>
+</body>
+</html>
