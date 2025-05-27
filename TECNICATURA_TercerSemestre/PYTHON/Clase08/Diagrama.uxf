@@ -1,0 +1,53 @@
+<diagram program="umletino" version="15.1"><zoom_level>5</zoom_level><element><id>UMLClass</id><coordinates><x>222</x><y>139</y><w>135</w><h>125</h></coordinates><panel_attributes>conexion
+--
+-DATABASE: String
+-USERNAME: String
+-PASSWORD: String
+-DB_PORT: String
+-HOST: String
+-conexion: connection
+-cursor: Cursor
+--
++obtenerConexion(cls): Connection
++obtenerCursor(cls): Cursor
++cerrar(cls)
+--
+Responsabilidades:
+Administrar la conexión a la base
+de datos
+bg=black
+fg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>277</x><y>264</y><w>150</w><h>95</h></coordinates><panel_attributes>lt=&lt;..
+fg=white</panel_attributes><additional_attributes>280;170;10;170;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>422</x><y>79</y><w>115</w><h>90</h></coordinates><panel_attributes>Persona
+--
+-id_persona: int
+-nombre: String
+-apellido: String
+-email: String
+--
++__str__(): String
++metodo Get/Set de cada atributo
+--
+Responsabilidades:
+Crear objetos de la entidad de
+Persona
+bg=black
+fg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>472</x><y>164</y><w>15</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+fg=white</panel_attributes><additional_attributes>10;160;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>417</x><y>244</y><w>115</w><h>120</h></coordinates><panel_attributes>PersonaDao
+--
+-SELECCIONAR: String
+-INSERTAR: String
+-ACTUALIZAR: String
+-ELIMINAR: String
+--
++seleccionar(cls)
++insertar(cls, persona)
++actualizar(cls, persona)
++eliminar(cls, persona)
+--
+Responsabilidades:
+Realizar las operaciones sobre la
+base de datos de la entidad
+Persona
+bg=black
+fg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>207</x><y>54</y><w>355</w><h>325</h></coordinates><panel_attributes>Name
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element></diagram>
