@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Avatar: La Leyenda de Aang</title>
-    <style>
- 
-    </style>
+    <script src="avatar.js"></script>
+
 </head>
 <body>
     <h1>🔥💨⛰️💧</h1>
@@ -18,32 +17,28 @@
 
             <div class="personajes-container">
                 <div class="personaje">
-                    <p>Zuko</p>
                     <img src="assets/Zuko.jpg" alt="Zuko">
                     <br>
                     <input type="radio" name="personaje" id="zuko"/>
-                    <label for="zuko"></label>
+                    <label for="zuko">Zuko</label>
                 </div>
                 <div class="personaje">
-                    <p>Katara</p>
                     <img src="assets/Katara.jpg" alt="Katara">
                     <br>
                     <input type="radio" name="personaje" id="katara"/>
-                    <label for="katara"></label>
+                    <label for="katara">Katara</label>
                 </div>
                 <div class="personaje">
-                    <p>Aang</p>
-                    <img src="assets/Aang.jpg" alt="Katara"/>
+                    <img src="assets/Aang.jpg" alt="Aang"/>
                     <br>
                     <input type= "radio" name="personaje" id="aang"/>
-                    <label for="aang"></label>
+                    <label for="aang">Aang</label>
                 </div>
                 <div class="personaje">
-                    <p>Toph</p>
-                    <img src="assets/Toph.jpg" id="toph">
+                    <img src="assets/Toph.jpg" alt="toph">
                     <br>
                     <input type="radio" name="personaje" id="toph"/>
-                    <label for="toph"></label>
+                    <label for="toph">Toph</label>
                 </div>
             </div>
 
@@ -55,8 +50,8 @@
 
     <section id="seleccionar-ataque">
         <h2>Elige tu ataque</h2>
-        <p>Tu personaje tiene <span>3</span> vidas</p>
-        <p>Los personajes de tu enemigo tienen <span>3</span> vidas</p>
+        <p>Tu personaje <span id="personaje-jugador"></span> tiene <span>3</span> vidas</p>
+        <p>El personaje <span id="personaje-enemigo"></span> de tu enemigo tienen <span>3</span> vidas</p>
         <p>
             <button id="boton-fuego">Fuego 🔥</button>
             <button id="boton-agua">Agua💧</button>
@@ -72,7 +67,5 @@
     <section id="reiniciar">
         <button id="boton-reiniciar">Reiniciar</button>
     </section>
-
-    <script src="avatar.js"></script>
 </body>
 </html>
