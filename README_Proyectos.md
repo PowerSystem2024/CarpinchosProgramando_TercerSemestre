@@ -16,7 +16,7 @@
 | 📌 Tarea                  | 📊 Estado          |
 |---------------------------|---------------------|
 | *🔍 Elección de Proyecto* | ✅ **Completo**    |
-| *🔍 Guión*                | 🚧 **En progreso** |
+| *📝 Guión*                | 🚧 **En progreso** |
 | *🎥 Grabación*            | ⌛ **Pendiente**   |
 | *✂ Edición*               | ⌛ **Pendiente**   | 
 | *🏆 Entrega*              | ⌛ **Pendiente**   | 
