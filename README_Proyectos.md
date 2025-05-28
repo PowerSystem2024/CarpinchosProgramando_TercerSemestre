@@ -1,18 +1,25 @@
 # PROGRESO DE LOS PROYECTOS DEL TERCER SEMESTRE
 
+**Leyenda de Estados**:  
+- ✅ **Completo**: Tarea finalizada y validada.  
+- 🔍 **En pruebas**: En fase de testing/QA.  
+- 🚧 **En progreso**: Desarrollo activo.  
+- ⌛ **Pendiente**: Esperando recursos/aprobación.  
+- 🗑️ **Eliminada**: Descarta (sin impacto en el sistema). 
+
 ## PROGRAMACIÓN III - Proyecto Integrador (Python)
 - *Link al repositorio con su respectivo README*: https://github.com/PowerSystem2024/CapybaraFilms_ProyectoTercerSemestre.git
 
 ---
 
 ## INGLÉS II - Proyecto (Video en Inglés)
-| 📌 Task                | 👥 Assigned To       | 📊 Status           | 🚀 Progress       | 📝 Notes                          |
-|-----------------------|---------------------|--------------------|------------------|----------------------------------|
-| *🔍 Research*       | @Alex, @Jamie       | ✅ Completado      | 100%             | Fuentes verificadas              |
-| *✍ Script*         | @Taylor             | 🟡 *En revisión* | 90%              | Esperando feedback               |
-| *🎥 Recording*      | @Morgan, @Casey     | 🔴 *Pending*     | 30%  | Necesita locación                |
-| *✂ Editing*        | @Riley              | ⏳ *Not Started* | 0%               | --                               |
-| *🏆 Final Submission| @TeacherSmith       | ❓ **TBD*         | --               | Fecha límite: Junio 5            |
+| 📌 Tarea                  | 📊 Estado          |
+|---------------------------|---------------------|
+| *🔍 Elección de Proyecto* | ✅ **Completo**    |
+| *🔍 Guión*                | 🚧 **En progreso** |
+| *🎥 Grabación*            | ⌛ **Pendiente**   |
+| *✂ Edición*               | ⌛ **Pendiente**   | 
+| *🏆 Entrega*              | ⌛ **Pendiente**   | 
 
 ---
 
