@@ -16,12 +16,12 @@
 
 ### 📆 Segunda etapa: Mayo - Junio - Julio
 
-| 📅 Semana                     | 👤 Scrum Master           |
+| 📅 Semana                   | 👤 Scrum Master           |
 |------------------------------|---------------------------|
 | 26/05 al 01/06               | Quiroz, Ezequiel          |
-| 02/06 al 08/06               | Atim, Mercedes            |
+| 02/06 al 08/06               | Ríos Garín, Ana Paula     |
 | 09/06 al 15/06               | Aguilera, Mariana         |
 | 16/06 al 22/06               | Lanatta, Wanda            |
 | 23/06 al 29/06               | Aguilar, Melina           |
 | 30/06 al 06/07               | Mercado, Nicolás          |
-| 07/07 al 13/07               | Ríos Garín, Ana Paula     |
+| 07/07 al 13/07               | Atim, Mercedes            |
