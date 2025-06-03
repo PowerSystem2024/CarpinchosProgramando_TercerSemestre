@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Torres de Hanoi</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      margin-top: 20px;
+    }
+    .torres {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      height: 300px;
+      margin-top: 30px;
+    }
+    .varilla {
+      width: 120px;
+      height: 100%;
+      border: 2px solid #999;
+      background-color: #eee;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      position: relative;
+      padding: 10px 0;
+    }
+    .disco {
+      height: 20px;
+      background-color: steelblue;
+      margin: 3px 0;
+      border-radius: 4px;
+      transition: all 0.5s ease;
+    }
+    #controles {
+      margin-top: 20px;
+    }
+    input, button {
+      font-size: 16px;
+      padding: 6px 12px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Torres de Hanoi - Visual</h1>
+  
+  <div id="controles">
+    <label for="discos">Cantidad de discos:</label>
+    <input type="number" id="discos" value="3" min="1" max="6">
+    <button onclick="iniciarJuego()">Iniciar</button>
+  </div>
+
+  <div class="torres">
+    <div id="A" class="varilla"></div>
+    <div id="B" class="varilla"></div>
+    <div id="C" class="varilla"></div>
+  </div>
+
+  <script>
+    let pasos = [];
+
+    function crearDisco(tamaño, total) {
+      const disco = document.createElement("div");
+      disco.className = "disco";
+      disco.style.width = (tamaño * (100 / total)) + "%";
+      disco.dataset.tamaño = tamaño;
+      return disco;
+    }
+
+    function iniciarJuego() {
+      const n = parseInt(document.getElementById("discos").value);
+      const varillas = { A: document.getElementById("A"), B: document.getElementById("B"), C: document.getElementById("C") };
+
+      // Limpiar varillas
+      for (const v in varillas) {
+        varillas[v].innerHTML = "";
+      }
+
+      // Crear discos en varilla A
+      for (let i = n; i >= 1; i--) {
+        const disco = crearDisco(i, n);
+        varillas.A.appendChild(disco);
+      }
+
+      pasos = [];
+      torresDeHanoi(n, 'A', 'C', 'B');
+
+      ejecutarPasos(varillas);
+    }
+
+    function torresDeHanoi(n, origen, destino, auxiliar) {
+      if (n === 1) {
+        pasos.push([origen, destino]);
+      } else {
+        torresDeHanoi(n - 1, origen, auxiliar, destino);
+        pasos.push([origen, destino]);
+        torresDeHanoi(n - 1, auxiliar, destino, origen);
+      }
+    }
+
+    function ejecutarPasos(varillas) {
+      let i = 0;
+
+      function moverPaso() {
+        if (i >= pasos.length) return;
+
+        const [origen, destino] = pasos[i];
+        const varillaOrigen = varillas[origen];
+        const varillaDestino = varillas[destino];
+        const disco = varillaOrigen.lastElementChild;
+
+        if (disco) {
+          varillaDestino.appendChild(disco);
+        }
+
+        i++;
+        setTimeout(moverPaso, 800); // Cambiar velocidad 
+      }
+
+      moverPaso();
+    }
+  </script>
+
+</body>
+</html>
