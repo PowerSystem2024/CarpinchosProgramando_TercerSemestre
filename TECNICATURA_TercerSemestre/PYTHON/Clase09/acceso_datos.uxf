@@ -1,0 +1,44 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>130</x><y>80</y><w>210</w><h>230</h></coordinates><panel_attributes>&lt;&lt;conexion&gt;&gt;
+--
+_- DATABASE: String_
+_- USERNAME: String_
+_- PASSWORD: String_
+_- DBPORT: String_
+_- HOST: String_
+_- conexion: connection_
+_- cursor: Cursor_
+--
+_+ obtenerConexion(cls): Conecction_
+_+ obtenerCursor(cls): Cursor_
+_+ cerrar(cls)_
+--
+Responsabilidades
+Administrar la conexión a la base 
+de datos</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>100</y><w>200</w><h>170</h></coordinates><panel_attributes>&lt;&lt;Persona&gt;&gt;
+--
+- idPersona: int
+- nombre: String
+- apellido: String
+- email: String
+--
++ _str_(): String
++ Método Get/Set a cada atributo
+--
+Responsabilidades
+Crear objetos de la entidad de 
+Persona</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>360</y><w>210</w><h>220</h></coordinates><panel_attributes>&lt;&lt;PersonaDao&gt;&gt;
+--
+_ - SELECCIONAR: String_
+_ - INSERTAR: String_
+_ - ACTUALIZAR: String_
+_ - ELIMINAR: String_
+--
+_+ seleccionar(cls)_
+_+ insertar(cls, persona)_
+_+ actualizar(cls, persona)_
+_+ eliminar(cls, persona)_
+--
+Responsabilidades
+Realizar las operaciones sobre la
+base de datos de la entidad
+Persona</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>260</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>460</y><w>230</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>210;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>300</y><w>30</w><h>190</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>70</y><w>530</w><h>520</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>40</y><w>100</w><h>30</h></coordinates><panel_attributes>acceso_datos</panel_attributes><additional_attributes></additional_attributes></element></diagram>
