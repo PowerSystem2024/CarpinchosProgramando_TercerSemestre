@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Avatar: La Leyenda de Aang</title>
+    <script src="avatar.js"></script>
+
+</head>
+<body>
+    <h1>🔥💨⛰️💧</h1>
+
+    <section id="seleccionar-personaje">
+        <div class="contenedor-principal">
+            <h2>Selecciona tu personaje</h2>
+
+            <div class="personajes-container">
+                <div class="personaje">
+                    <img src="assets/Zuko.jpg" alt="Zuko">
+                    <br>
+                    <input type="radio" name="personaje" id="zuko"/>
+                    <label for="zuko">Zuko</label>
+                </div>
+                <div class="personaje">
+                    <img src="assets/Katara.jpg" alt="Katara">
+                    <br>
+                    <input type="radio" name="personaje" id="katara"/>
+                    <label for="katara">Katara</label>
+                </div>
+                <div class="personaje">
+                    <img src="assets/Aang.jpg" alt="Aang"/>
+                    <br>
+                    <input type= "radio" name="personaje" id="aang"/>
+                    <label for="aang">Aang</label>
+                </div>
+                <div class="personaje">
+                    <img src="assets/Toph.jpg" alt="toph">
+                    <br>
+                    <input type="radio" name="personaje" id="toph"/>
+                    <label for="toph">Toph</label>
+                </div>
+            </div>
+
+            <div class="boton-container">
+                <button id="boton-personaje">Seleccionar</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="seleccionar-ataque">
+        <h2>Elige tu ataque</h2>
+        <p>Tu personaje <span id="personaje-jugador"></span> tiene <span>3</span> vidas</p>
+        <p>El personaje <span id="personaje-enemigo"></span> de tu enemigo tienen <span>3</span> vidas</p>
+        <p>
+            <button id="boton-fuego">Fuego 🔥</button>
+            <button id="boton-agua">Agua💧</button>
+            <button id="boton-tierra">Tierra ⛰️</button>
+            <button id="boton-aire">Aire 💨</button>
+        </p>
+    </section>
+
+    <section id="mensajes">
+        <p>Tu personaje atacó con todo el poder del FUEGO, el personaje del enemigo atacó con medio poder de TIERRA - GANASTE 🤩</p>
+    </section>
+
+    <section id="reiniciar">
+        <button id="boton-reiniciar">Reiniciar</button>
+    </section>
+</body>
+</html>

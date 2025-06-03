@@ -1,0 +1,16 @@
+1) ¿Cómo desactivar el entorno virtual?
+El comando para desactivar el entorno virtual es:
+
+deactivate 
+
+Este comando desactiva el entorno virtual tanto en Windows como en Linux/MacOS
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+2) ¿Qué es el DOM?
+El DOM (Modelo de Objetos del Documento, por sus siglas en inglés Document Object Model) es una forma en la que los navegadores web organizan y representan una página web como una estructura de árbol.
+
+Cada parte del HTML (como etiquetas, textos o atributos) se convierte en un objeto dentro de ese árbol. Por ejemplo, una etiqueta <p> se convierte en un nodo que el navegador puede entender y manipular.
+
+Gracias al DOM, los lenguajes como JavaScript pueden acceder a esos objetos para leer, cambiar, agregar o eliminar contenido o estilos en la página, mientras el usuario la está viendo, sin tener que recargarla.
