@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Henny+Penny&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Klee+One&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <title>Avatar: La Leyenda de Aang</title>
     <script src="avatar.js"></script>
 
 </head>
 <body>
-    <h1>🔥💨⛰️💧</h1>
+    <h1>🔥🌪️⛰️💧La Leyenda de Aang</h1>
 
     <section id="seleccionar-personaje">
         <div class="contenedor-principal">
@@ -49,23 +52,22 @@
     </section>
 
     <section id="seleccionar-ataque">
-        <h2>Elige tu ataque</h2>
-        <p>Tu personaje <span id="personaje-jugador"></span> tiene <span>3</span> vidas</p>
-        <p>El personaje <span id="personaje-enemigo"></span> de tu enemigo tienen <span>3</span> vidas</p>
+        <p>Tu personaje <span id="personaje-jugador"></span> tiene <span id="vida-jugador">3</span> vidas</p>
+        <p>El personaje <span id="personaje-enemigo"></span> de tu enemigo tiene <span id="vida-enemigo">3</span> vidas</p>
+        <h2>Elige tu ataque:</h2>
         <p>
-            <button id="boton-fuego">Fuego 🔥</button>
-            <button id="boton-agua">Agua💧</button>
-            <button id="boton-tierra">Tierra ⛰️</button>
-            <button id="boton-aire">Aire 💨</button>
+            <button id="boton-punio">Puño 🤜🏻</button>
+            <button id="boton-patada">Patada🦵🏻</button>
+            <button id="boton-barrida">Barrida 🦶🏻</button>
         </p>
     </section>
 
     <section id="mensajes">
-        <p>Tu personaje atacó con todo el poder del FUEGO, el personaje del enemigo atacó con medio poder de TIERRA - GANASTE 🤩</p>
+        <p></p>
     </section>
 
     <section id="reiniciar">
-        <button id="boton-reiniciar">Reiniciar</button>
+        <button id="boton-reiniciar" >Reiniciar</button>
     </section>
 </body>
 </html>
