@@ -1,42 +1,112 @@
-       body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Henny+Penny&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Klee+One&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Overlock+SC&display=swap');
+    body {
+        font-family: 'Overlock SC', 'Merriweather', 'Nunito Sans', 'Inter', sans-serif;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-image: url("./assets/fondo.png");
+        background-repeat: repeat;
+        background-size: 120px 120px;
+        position: relative;
+        color: #000000;
+        text-shadow:
+            0 0 5px rgb(255, 255, 0),
+            0 0 10px rgb(255, 157, 0),
+            0 0 20px rgb(255, 0, 0),
+    }
 
-        #seleccionar-personaje {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 30px;
-        }
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(0.5px); /* Aplica un desenfoque al fondo */
+        -webkit-backdrop-filter: blur(2px);
+        z-index: -1;
+    }
 
-        .contenedor-principal {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    h1,
+    #seleccionar-personaje,
+    #seleccionar-ataque,
+    #mensajes,
+    #reiniciar {
+        background-color: rgba(73, 45, 2, 0.887); /* Blanco semitransparente */
+        padding: 20px;
+        width: 70%;
+        height: 80%;
+        border-radius: 18px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);
+        margin: 20px auto;
+        color: rgb(255, 224, 144);
+    }
 
-        .personajes-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
+    #seleccionar-personaje,
+    #seleccionar-ataque,
+    #mensajes,
+    #reiniciar {
+        font-size: 25px;
+    }
 
-        .personaje {
-            text-align: center;
-        }
+    h1{
+        font-size: 50px;
+    }
 
-        .personaje img {
-            width: 150px;
-            height: auto;
-            border-radius: 20px;
-        }
+    span{
+        text-shadow: rgb(0, 0, 0) 0 5px;
+    }
+    #seleccionar-personaje {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+    }
 
-        .boton-container {
-            margin-top: 20px;
-        }
+    .contenedor-principal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .personajes-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+
+    .personaje {
+        text-align: center;
+    }
+
+    .personaje img {
+        width: 160px;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .boton-container {
+        margin-top: 20px;
+    }
+
+    button {
+        background-color: #cc8118; /* Color de fondo del botón */
+        color: rgb(103, 74, 48); /* Color del texto del botón */
+        border: none; /* Sin borde */
+        padding: 10px 20px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer; /* Cambia el cursor al pasar por encima */
+        font-size: 16px; /* Tamaño de fuente del botón */
+        font-weight: bolder;
+    }
+
+    #mensajes {
+    width: 70%;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+}

@@ -1,0 +1,5 @@
+11:11:33 PM: DEBUG [logger_base.py: 26] Mensaje a nivel debug.
+11:11:33 PM: INFO [logger_base.py: 31] Mensaje a nivel info.
+11:11:33 PM: WARNING [logger_base.py: 35] Mensaje a nivel warning.
+11:11:33 PM: ERROR [logger_base.py: 39] Mensaje a nivel error.
+11:11:33 PM: CRITICAL [logger_base.py: 43] Mensaje a nivel critical.
