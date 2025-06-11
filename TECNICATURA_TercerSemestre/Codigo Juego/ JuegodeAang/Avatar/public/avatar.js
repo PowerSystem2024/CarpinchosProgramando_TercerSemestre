@@ -27,7 +27,6 @@ function seleccionarPersonajeJugador() {
 
     // Llamar a la función para que la PC elija su personaje
     seleccionarPersonajeEnemigo();
-
 }
 
 function iniciarJuego() {
@@ -55,28 +54,28 @@ function seleccionarPersonajeEnemigo() {
 }
 
 function ataquePunio() {
-    ataqueJugador = "Puño"
+    ataqueJugador = " Puño 🤜🏻 "
     ataqueAleatorioEnemigo()
 }
 
 function ataquePatada() {
-    ataqueJugador = "Patada"
+    ataqueJugador = " Patada 🦵🏻"
     ataqueAleatorioEnemigo()
 }
 
 function ataqueBarrida() {
-    ataqueJugador = "Barrida"
+    ataqueJugador = " Barrida 🦶🏻 "
     ataqueAleatorioEnemigo()
 }
 
 function ataqueAleatorioEnemigo() {
     let ataqueAleatorio = Math.floor(Math.random() * 3);
     if (ataqueAleatorio == 0){
-        ataqueEnemigo = "Puño"
+        ataqueEnemigo = " Puño 🤜🏻 "
     } else if (ataqueAleatorio == 1){
-        ataqueEnemigo = "Patada"
+        ataqueEnemigo = " Patada 🦵🏻"
     } else {
-        ataqueEnemigo = "Barrida"
+        ataqueEnemigo = " Barrida 🦶🏻 "
     }
 
     combate()
@@ -89,9 +88,9 @@ function combate() {
     if (ataqueEnemigo === ataqueJugador) {
         crearMensaje("EMPATE");
     } else if (
-        (ataqueJugador === 'Puño' && ataqueEnemigo === 'Barrida') ||
-        (ataqueJugador === 'Patada' && ataqueEnemigo === 'Puño') ||
-        (ataqueJugador === 'Barrida' && ataqueEnemigo === 'Patada')
+        (ataqueJugador === " Puño 🤜🏻 " && ataqueEnemigo === " Barrida 🦶🏻 ") ||
+        (ataqueJugador === " Patada 🦵🏻" && ataqueEnemigo === " Puño 🤜🏻 ") ||
+        (ataqueJugador === " Barrida 🦶🏻 " && ataqueEnemigo === " Patada 🦵🏻")
     ) {
         crearMensaje("GANASTE");
         vidaEnemigo--; // Resta una vida al enemigo
@@ -128,6 +127,37 @@ function crearMensajeFinal(resultadoFinal) {
     document.getElementById("boton-punio").disabled = true;
     document.getElementById("boton-patada").disabled = true;
     document.getElementById("boton-barrida").disabled = true;
+}
+
+function reiniciarJuego() {
+    // Reiniciar las vidas a 3
+    vidaJugador = 3;
+    vidaEnemigo = 3;
+
+    // Reiniciar los textos de vidas en el DOM
+    document.getElementById('vida-jugador').innerHTML = vidaJugador;
+    document.getElementById('vida-enemigo').innerHTML = vidaEnemigo;
+
+    // Vaciar los mensajes
+    let mensajes = document.querySelector('#mensajes p');
+    mensajes.innerHTML = "";
+
+    // Resetear la selección de personajes
+    document.getElementById('personaje-jugador').innerHTML = "";
+    document.getElementById('personaje-enemigo').innerHTML = "";
+
+    document.querySelectorAll('input[type="radio"]').forEach(input => {
+        input.checked = false;
+        input.disabled = false; // Asegura que estén habilitados
+    });
+
+    // Habilitar los botones de ataque
+    document.getElementById("boton-punio").disabled = false;
+    document.getElementById("boton-patada").disabled = false;
+    document.getElementById("boton-barrida").disabled = false;
+
+    alert("Juego reiniciado. Selecciona nuevamente tu personaje.");
+    iniciarJuego();
 }
 
 // Iniciar el juego cuando la página haya cargado
