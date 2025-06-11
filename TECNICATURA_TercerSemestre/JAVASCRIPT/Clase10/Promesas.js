@@ -1,9 +1,9 @@
 let miPromesa = new Promise( (resolver, rechazar) => { //creamos el objeto de tipo promesa, con dos parámetros callback
     let expresion = true;
     if(expresion){
-        resolver('Resolvió correctamente'); //cuando termina bien/si es verdadera la expresión
+        //resolver('Resolvió correctamente'); //cuando termina bien/si es verdadera la expresión
     }else {
-        rechazar('Se produjo un error'); //cuando ocurre un error/ si es falsa
+        //rechazar('Se produjo un error'); //cuando ocurre un error/ si es falsa
     }
 });
 
@@ -30,4 +30,16 @@ async function miFuncionConPromesa(){
     return 'Saludos con promesas y async'; //como si llamáramos a la función resolver
 }
 
-miFuncionConPromesa().then(valor => console.log(valor));
+//miFuncionConPromesa().then(valor => console.log(valor));
+
+//async/await
+
+async function funcionConPromesaYAwait(){
+    let miPromesa = new Promise(resolver => {
+        resolver('Promesa con await')
+    });
+    console.log(await miPromesa);
+}
+funcionConPromesaYAwait();
+    
+//Await sólo se puede usar en una función declarada con async
