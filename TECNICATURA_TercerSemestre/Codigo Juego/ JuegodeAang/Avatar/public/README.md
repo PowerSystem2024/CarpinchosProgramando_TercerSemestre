@@ -1,119 +1,110 @@
-# Carpinchos Programando ![carpincho](https://github.com/user-attachments/assets/34c61984-7f45-403c-a3ae-a57dd16a27bf) 
+# Carpinchos Programando  
+![carpincho](https://github.com/user-attachments/assets/34c61984-7f45-403c-a3ae-a57dd16a27bf) 
 
 # 🎮 Avatar: La Leyenda de Aang
 
 ## 🌟 Descripción
-Un emocionante juego basado en la serie "Avatar: La Leyenda de Aang" donde podrás elegir tu personaje favorito y enfrentarte a un oponente en batallas elementales.
+
+Un divertido juego inspirado en la serie “Avatar: La Leyenda de Aang”, donde podés elegir a tu personaje favorito y enfrentarte a un oponente en emocionantes combates por turnos usando ataques físicos.
 
 ---
 
 ## 🎯 Características Principales
 
 ### 👥 Selección de Personajes
-- **Zuko** 🔥 - Maestro del Fuego  
-- **Katara** 💧 - Maestra del Agua  
-- **Aang** 💨 - Avatar, Maestro de los Cuatro Elementos  
-- **Toph** ⛰️ - Maestra de la Tierra
+- Zuko 🔥  
+- Katara 💧  
+- Aang 💨  
+- Toph ⛰️  
 
-### ⚔️ Sistema de Combate
-- Sistema de vidas (3 vidas por jugador)
-- Ataques elementales:
-  - Fuego 🔥
-  - Agua 💧
-  - Tierra ⛰️
-  - Aire 💨
+Seleccioná tu personaje y combatí contra un oponente elegido aleatoriamente.
 
-### 🎲 Mecánicas del Juego
-- Selección aleatoria del oponente
-- Sistema de turnos
-- Interfaz intuitiva y amigable
-- Botón de reinicio para comenzar nuevas partidas
+### ⚔️ Sistema de Combate 
+- Tipos de ataque:  
+  - 👊 Puño  
+  - 🦶 Patada  
+  - 🔁 Barrida  
+- Lógica estilo piedra-papel-tijera:  
+  - Puño vence a Barrida  
+  - Patada vence a Puño  
+  - Barrida vence a Patada  
+- Sistema de vidas:  
+  - Ambos jugadores comienzan con 3 vidas  
+  - Cada ataque exitoso reduce 1 vida del oponente
+
+### 🧠 Inteligencia del Enemigo
+- El enemigo elige su ataque de forma aleatoria  
+- El resultado de cada ronda se muestra en pantalla
+
+### 🛎️ Final del Juego
+- Cuando un jugador pierde todas las vidas, se muestra un mensaje de victoria o derrota  
+- Los botones de ataque se desactivan al finalizar el juego  
+- Se puede reiniciar la partida con un botón
 
 ---
 
 ## 🛠️ Tecnologías Utilizadas
-- HTML5
-- CSS3
-- JavaScript
+- HTML5  
+- CSS3  
+- JavaScript (vanilla)  
 - DOM (Document Object Model)
 
 ---
 
-## 🎨 Características de la Interfaz
-- Diseño responsivo
-- Imágenes de personajes con bordes redondeados
-- Botones interactivos
-- Mensajes de estado del juego
-- Sección de selección de personajes
-- Sección de combate
-- Sección de mensajes
-- Botón de reinicio
+## 🎨 Interfaz del Juego
+- Diseño responsive  
+- Personajes con imágenes redondeadas  
+- Botones de ataque interactivos  
+- Panel de mensajes dinámico  
+- Indicadores de vidas  
+- Botón de reinicio funcional
 
 ---
 
-## 🎮 ¿Cómo Jugar?
+## 🕹️ ¿Cómo Jugar?
 
-1. Selecciona tu personaje favorito.
-2. Haz clic en el botón "Seleccionar".
-3. Elige tu ataque elemental.
-4. ¡Combate contra tu oponente!
-5. Gana reduciendo las vidas de tu oponente a 0.
-
----
-
-## 🕹️ Controles
-
-- Usa los botones de selección de personaje.
-- Selecciona tus ataques con los botones elementales.
-- Reinicia el juego cuando quieras con el botón "Reiniciar".
+1. Seleccioná tu personaje y hacé clic en el botón “Seleccionar”.  
+2. El juego asignará un oponente aleatorio.  
+3. Elegí uno de los tres ataques disponibles.  
+4. El enemigo también atacará de forma aleatoria.  
+5. ¡Ganás si dejás sin vidas al enemigo!
 
 ---
 
 ## 🎯 Objetivo
 
-Derrotar al oponente reduciendo sus vidas a 0 utilizando estrategias elementales.
+Derrotar al oponente reduciendo sus vidas a 0 utilizando estrategia y suerte en el sistema de combate.
 
 ---
 
-## 🧠 ¿Qué es el DOM?
+## 📚 ¿Qué es el DOM?
 
-**Document Object Model: Modelo de Objetos.**  
-El DOM es la forma en la que el navegador, por dentro, estructura las etiquetas HTML para que se puedan manipular en código JavaScript.
+El **Document Object Model (DOM)** es la forma en que el navegador organiza internamente las etiquetas HTML para que JavaScript pueda manipularlas dinámicamente.
 
-El navegador es un objeto que internamente lo llama JavaScript: `window`. Estas son cada una de las pestañas del navegador.
+- `window` representa todo el navegador  
+- `document` representa solo el contenido de la página web  
+- Los botones, imágenes y textos viven dentro del `document`
 
-También está la barra de la dirección de los sitios web y esta es la que detecta que la página web cargue,  
-pero no es la página web en sí. El HTML y JavaScript con sus botones y demás viven dentro del `window` y se llama: `document`.
-
-`window` es pensar en el navegador entero y en los eventos del navegador.
-
-`document` es pensar específicamente en lo que está dentro de la etiqueta HTML.
-
-Donde se pone título (`h1`), un párrafo (`p`), o un botón (`button`).
-
-Ahora a un botón se le da click, y a este click se le puede pegar una función  
-y que esta se ejecute o se invoque. A esto se lo llama: **escuchador de eventos**.
+Podemos usar funciones llamadas **event listeners** para detectar interacciones como clics, movimientos o cambios, y ejecutar respuestas dinámicas en el juego.
 
 ---
 
-## 🌀 ¿Cómo se llama?
+## 🔁 Eventos del Juego
 
-`eventListener`: esto significa que el navegador entero está escuchando en espera de que le demos click al botón  
-o a cualquier otra cosa como evento.  
-Por ejemplo, el evento de que la página termine de cargar también es un evento, y le podemos pegar una función.  
-También podemos poner una función que, al cambiar el tamaño del navegador, genere cosas como el acomodamiento de las partes  
-según el dispositivo que estamos utilizando.
+El juego usa `addEventListener` para:
 
-Esta función se llama **responsive**: configura el alto y ancho de un sitio web para dar formato al sitio ante el uso de cualquier dispositivo, en diferentes tamaños.
+- Detectar clics en los botones de ataque  
+- Escuchar cuándo se selecciona un personaje  
+- Ejecutar lógica de combate y mostrar mensajes  
+- Controlar el reinicio del juego
 
 ---
 
 ## 📝 Notas Adicionales
 
-El juego utiliza el **DOM** para manipular los elementos de la página y crear una experiencia interactiva.  
-Los eventos del juego son manejados a través de **event listeners** que responden a las acciones del usuario.  
-Gracias a esto, el juego es dinámico, adaptable y divertido para cualquier dispositivo.
+Este juego es completamente interactivo gracias al uso del DOM y los event listeners.  
+Ideal para aprender cómo combinar JavaScript con interfaces dinámicas, lógica de combate y control de flujo según las decisiones del usuario.
 
 ---
 
-¡Que comience la batalla! 🌟
+**¡Que comience la batalla!**
