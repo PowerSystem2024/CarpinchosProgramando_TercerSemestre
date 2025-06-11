@@ -5,7 +5,7 @@ public class CalculadoraUTN {
         Scanner entrada = new Scanner(System.in);
         // Ciclo infinito
         while(true){
-            System.out.println("******* Aplicación Calculadora *******");
+            System.out.println("\n******* Aplicación Calculadora *******");
             mostrarMenu();
 
             try {
@@ -26,8 +26,8 @@ public class CalculadoraUTN {
                 System.out.println("Ocurrió un error: " + e.getMessage());
                 System.out.println();
             }
-        } // Fin WHILE
-    } // Fin MAIN
+        }
+    }
 
     // Metodo mostrarMenu
     private static void mostrarMenu(){
@@ -39,8 +39,8 @@ public class CalculadoraUTN {
                     4. División
                     5. Salir
                     """);
-        System.out.println("¿Operación a realizar?");
-    } // Fin mostrarMenu
+        System.out.println("¿Qué operación desea realizar? Seleccione un número: ");
+    }
 
     // Metodo ejecutarOperacion
         private static void ejecutarOperacion(int operacion, Scanner entrada){
@@ -67,10 +67,15 @@ public class CalculadoraUTN {
             }
             // División
             case 4 -> {
-                resultado = operando1 / operando2;
-                System.out.println("Resultado de la división: " + resultado);
-            }
+                // División
+                    if (operando2 == 0) {
+                        System.out.println("Error: No es posible dividir entre cero.");
+                    } else {
+                        resultado = operando1 / operando2;
+                        System.out.println("Resultado de la división: " + resultado);
+                    }
+                }
             default -> System.out.println("Opción errónea: " + operacion);
-        } // Fin SWITCH
-    } // Fin ejecutarOperacion
-} // Fin CLASE
+        }
+    }
+}
