@@ -7,7 +7,11 @@ let miPromesa = new Promise( (resolver, rechazar) => { //creamos el objeto de ti
     }
 });
 
-miPromesa.then(
-    valor => console.log(valor), //función callback para cuando se resuelve
-    error => console.log(error) //función callback para cuando se rechaza
-);
+//miPromesa.then(
+    //valor => console.log(valor), //función callback para cuando se resuelve
+   // error => console.log(error) //función callback para cuando se rechaza
+//);
+
+miPromesa
+    .then( valor => console.log(valor))
+    .catch(error => console.log(error));
