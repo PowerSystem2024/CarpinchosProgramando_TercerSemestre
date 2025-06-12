@@ -43,6 +43,18 @@ function iniciarJuego() {
 
     let botonReiniciar = document.getElementById('boton-reiniciar');
     botonReiniciar.addEventListener('click', reiniciarJuego);
+    
+    document.getElementById('boton-reglas').addEventListener('click', mostrarReglas);
+    document.getElementById('cerrar-reglas').addEventListener('click', cerrarReglas);
+    
+    // Cierra el modal al hacer clic fuera del contenido
+    window.addEventListener('click', function(event) {
+        const modal = document.getElementById('modal-reglas');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+    //document.getElementById('boton-reglas').addEventListener('click', () => this.mostrarReglas());
 }
 
 function seleccionarPersonajeEnemigo() {
@@ -158,7 +170,18 @@ function reiniciarJuego() {
 
     alert("Juego reiniciado. Selecciona nuevamente tu personaje.");
     iniciarJuego();
-}
+    }
+
+    function mostrarReglas(){
+        const modal = document.getElementById('modal-reglas');
+        modal.style.display = 'flex';
+    }
+    
+    function cerrarReglas(){
+        const modal = document.getElementById('modal-reglas');
+        modal.style.display = 'none';
+    }
+    
 
 // Iniciar el juego cuando la página haya cargado
 window.addEventListener('load', iniciarJuego);

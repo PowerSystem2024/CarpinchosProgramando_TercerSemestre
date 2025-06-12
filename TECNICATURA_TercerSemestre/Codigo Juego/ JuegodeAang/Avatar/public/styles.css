@@ -20,6 +20,7 @@
     #seleccionar-personaje,
     #seleccionar-ataque,
     #mensajes,
+    .reglas,
     #reiniciar {
         background-color: rgba(73, 45, 2, 0.887); /* Blanco semitransparente */
         padding: 20px;
@@ -82,7 +83,7 @@
         margin-top: 20px;
     }
 
-    button {
+    button, .boton-reglas {
         background-color: #cc8118; /* Color de fondo del botón */
         color: rgb(103, 74, 48); /* Color del texto del botón */
         border: none; /* Sin borde */
@@ -108,3 +109,122 @@
         border-radius: 10px; /* Bordes redondeados */
         padding: 5px; /* Espaciado interno */
     }
+
+    .reglas{
+        display: none;
+        background-color: rgb(103, 74, 48);
+        color: white;
+        text-align: left;
+    }
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.6); /* fondo gris transparente */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    position: relative;
+    background-color: rgb(103, 74, 48);
+    padding: 5% 8% 5% 10%;
+    border-radius: 12px;
+    width: 30%;
+    height: auto;
+    color: white;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    font-size: 30px;
+    overflow: hidden;
+}
+
+/* Ondas arriba */
+.modal-contenido::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    height: 20px;
+    background:
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20" preserveAspectRatio="none"><path d="M0 10 Q5 0 10 10 T20 10 T30 10 T40 10 T50 10 T60 10 T70 10 T80 10 T90 10 T100 10" stroke="yellow" stroke-width="3" fill="none"/></svg>') repeat-x;
+    background-size: 20px 20px;
+    pointer-events: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Ondas abajo */
+.modal-contenido::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    height: 20px;
+    background:
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20" preserveAspectRatio="none"><path d="M0 10 Q5 20 10 10 T20 10 T30 10 T40 10 T50 10 T60 10 T70 10 T80 10 T90 10 T100 10" stroke="yellow" stroke-width="3" fill="none"/></svg>') repeat-x;
+    background-size: 20px 20px;
+    pointer-events: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Ondas izquierda */
+.modal-contenido > .border-left {
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 10px;
+    width: 20px;
+    background:
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="100%" preserveAspectRatio="none"><path d="M10 0 Q0 5 10 10 T10 20 T10 30 T10 40 T10 50 T10 60 T10 70 T10 80 T10 90 T10 100" stroke="yellow" stroke-width="3" fill="none"/></svg>') repeat-y;
+    background-size: 20px 20px;
+    pointer-events: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+/* Ondas derecha */
+.modal-contenido > .border-right {
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    right: 10px;
+    width: 20px;
+    background:
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="100%" preserveAspectRatio="none"><path d="M10 0 Q20 5 10 10 T10 20 T10 30 T10 40 T10 50 T10 60 T10 70 T10 80 T10 90 T10 100" stroke="yellow" stroke-width="3" fill="none"/></svg>') repeat-y;
+    background-size: 20px 20px;
+    pointer-events: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+.cerrar-modal {
+    position: absolute;
+    top: 3%;
+    right: 4%;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(255, 224, 144);
+    transition: color 0.3s, transform 0.3s; /* para animar suavemente */
+
+    &:hover {
+        color: rgb(172, 105, 11);
+        transform: scale(1.5); /* sin el % y usando transform */
+        transition: color 0.1s, transform 1s;
+    }
+}
+
+.modal-contenido h4 {
+    margin-top: 0;
+}
