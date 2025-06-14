@@ -55,7 +55,13 @@ public class ListadoPersonasApp {
                 //personas.forEach((persona)-> System.out.println(persona));
                 personas.forEach(System.out::println);
             }//fin caso 2
-        }
+            case 3 -> { //salir del ciclo
+                System.out.println("Hasta pronto...");
+                salir = true;
+            } //fin caso 3
+            default -> System.out.println("Opción incorrecta: "+opcion);
+        } //fin del switch
+        return salir;
     }//fin método ejecutarOperación
 
 } //fin de la clase ListadoPersonaApp
