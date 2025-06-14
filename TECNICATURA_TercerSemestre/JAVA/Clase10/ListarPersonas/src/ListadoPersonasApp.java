@@ -49,6 +49,12 @@ public class ListadoPersonasApp {
                 personas.add(persona);
                 System.out.println("La lista tiene: "+personas.size()+" elementos");
             }//fin caso 1
+            case 2 -> { //listar a las personas
+                System.out.println("Listado de personas: ");
+                //mejoras con lambda y el método de referencia
+                //personas.forEach((persona)-> System.out.println(persona));
+                personas.forEach(System.out::println);
+            }//fin caso 2
         }
     }//fin método ejecutarOperación
 
