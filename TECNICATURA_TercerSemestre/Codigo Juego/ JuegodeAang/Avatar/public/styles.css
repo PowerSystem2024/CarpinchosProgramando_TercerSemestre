@@ -94,6 +94,13 @@
         font-weight: bolder;
     }
 
+    button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(40%);
+    transition: all 0.2s ease-in-out;
+    }
+
     #mensajes {
     width: 70%;
     height: auto;

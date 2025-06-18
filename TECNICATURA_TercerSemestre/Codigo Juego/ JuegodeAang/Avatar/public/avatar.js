@@ -4,15 +4,15 @@ let vidaJugador = 3;
 let vidaEnemigo = 3;
 
 function seleccionarPersonajeJugador() {
-    // Obtener los inputs de los personajes del HTML
     let zuko = document.getElementById('zuko');
     let katara = document.getElementById('katara');
     let aang = document.getElementById('aang');
     let toph = document.getElementById('toph');
     let spanPersonajeJugador = document.getElementById('personaje-jugador');
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque');
+    let sectionSeleccionarPersonaje = document.getElementById('seleccionar-personaje');
 
-    // Condicional que verifica cuál está seleccionado
-    if (zuko.checked) { // `checked` es una propiedad que verifica si el input está seleccionado
+    if (zuko.checked) {
         spanPersonajeJugador.innerHTML = 'Zuko';
     } else if (katara.checked) {
         spanPersonajeJugador.innerHTML = 'Katara';
@@ -21,15 +21,34 @@ function seleccionarPersonajeJugador() {
     } else if (toph.checked) {
         spanPersonajeJugador.innerHTML = 'Toph';
     } else {
-        alert('No seleccionaste ningún personaje');
-        return; // Terminar la función si no hay ningún personaje seleccionado
+        // Mostrar mensaje visual en lugar de alert
+        let mensajeError = document.createElement("p");
+        mensajeError.innerHTML = 'Por favor, selecciona un personaje☝️';
+        mensajeError.style.color = "red";
+        sectionSeleccionarPersonaje.appendChild(mensajeError);
+
+        setTimeout(() => {
+            sectionSeleccionarPersonaje.removeChild(mensajeError);
+        }, 2000);
+        return; // <== importante: corta la función antes de seguir
     }
 
-    // Llamar a la función para que la PC elija su personaje
+    // Solo se ejecuta si la selección fue válida
+    sectionSeleccionarAtaque.style.display = 'block';
+    sectionSeleccionarPersonaje.style.display = 'none';
     seleccionarPersonajeEnemigo();
 }
 
 function iniciarJuego() {
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = 'none';
+
+    let sectionReiniciar = document.getElementById('reiniciar');
+    sectionReiniciar.style.display = 'none';
+
+    let sectionMensajes = document.getElementById('mensajes')
+    sectionMensajes.style.display = 'none';
+
     let botonPersonajeJugador = document.getElementById('boton-personaje');
     // Agregar un evento al botón de seleccionar personaje
     botonPersonajeJugador.addEventListener('click', seleccionarPersonajeJugador);
@@ -54,7 +73,6 @@ function iniciarJuego() {
             modal.style.display = 'none';
         }
     });
-    //document.getElementById('boton-reglas').addEventListener('click', () => this.mostrarReglas());
 }
 
 function seleccionarPersonajeEnemigo() {
@@ -94,6 +112,9 @@ function ataqueAleatorioEnemigo() {
 }
 
 function combate() {
+    let sectionMensajes = document.getElementById('mensajes')
+    sectionMensajes.style.display = 'block';
+
     let spanVidasJugador = document.getElementById('vida-jugador');
     let spanVidasEnemigo = document.getElementById('vida-enemigo');
 
@@ -110,7 +131,7 @@ function combate() {
     } else {
         crearMensaje("PERDISTE");
         vidaJugador--; // Resta una vida al jugador
-        spanVidasJugador.innerHTML = vidaJugador; // Actualiza el DOM
+        spanVidasJugador.innerHTML = vidaJugador;
     }
 
     revisarVidas(); // Verifica si alguien ganó o perdió
@@ -127,7 +148,8 @@ function revisarVidas(){
 }
 
 function crearMensaje(resultado) {
-    let mensajes = document.querySelector('#mensajes p');
+    let mensajes = document.querySelector('#mensajes p'); //querySelector selecciona un solo elemento del DOM y '#mensajes p' selecciona el elemento con id="mensajes"
+
     mensajes.innerHTML += `<br>Tu personaje lanzó ${ataqueJugador} y el enemigo lanzó ${ataqueEnemigo}: ${resultado}`;
 }
 
@@ -139,6 +161,10 @@ function crearMensajeFinal(resultadoFinal) {
     document.getElementById("boton-punio").disabled = true;
     document.getElementById("boton-patada").disabled = true;
     document.getElementById("boton-barrida").disabled = true;
+
+    let sectionReiniciar = document.getElementById('reiniciar');
+    sectionReiniciar.style.display = 'block';
+
 }
 
 function reiniciarJuego() {
@@ -169,15 +195,17 @@ function reiniciarJuego() {
     document.getElementById("boton-barrida").disabled = false;
 
     alert("Juego reiniciado. Selecciona nuevamente tu personaje.");
+    let sectionSeleccionarPersonaje = document.getElementById('seleccionar-personaje');
+    sectionSeleccionarPersonaje.style.display = 'block'
     iniciarJuego();
     }
 
-    function mostrarReglas(){
+function mostrarReglas(){
         const modal = document.getElementById('modal-reglas');
         modal.style.display = 'flex';
     }
     
-    function cerrarReglas(){
+function cerrarReglas(){
         const modal = document.getElementById('modal-reglas');
         modal.style.display = 'none';
     }
