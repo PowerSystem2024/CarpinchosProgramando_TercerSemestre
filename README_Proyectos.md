@@ -16,16 +16,18 @@
 | 📌 Tarea                  | 📊 Estado          |
 |---------------------------|---------------------|
 | *🔍 Elección de Proyecto* | ✅ **Completo**    |
-| *📝 Guión*                | 🚧 **En progreso** |
-| *🎥 Grabación*            | ⌛ **Pendiente**   |
-| *✂ Edición*               | ⌛ **Pendiente**   | 
-| *🏆 Entrega*              | ⌛ **Pendiente**   | 
+| *📝 Guión*                | ✅ **Completo**   |
+| *🎥 Grabación*            | ✅ **Completo**  |
+| *✂ Edición*               | ✅ **Completo**   | 
+| *🏆 Entrega*              | ✅ **Completo**    | 
 
 ---
 
 ## METODOLOGÍA DE SISTEMAS - Proyecto StartUp
 
-## 🚀 *Funcionalidades Clave*  
+- *Link al espacio de trabajo* : https://github.com/Capy-Do
+
+### 🎯 *Funcionalidades Clave*  
 
 | Módulo                  | Descripción                                                                 | Estado          | Prioridad |
 |-------------------------|-----------------------------------------------------------------------------|-----------------|-----------|
@@ -35,9 +37,24 @@
 | *📅 Calendario*       | Sincronización con tareas y reuniones (Google Calendar, Outlook)            | 🟡 *Beta*     | Alta      |
 | *📈 Reportes*         | Exportar resúmenes en PDF/CSV + gráficos de avance (Burn-down, KPIs)       | 🔴 *Backlog*  | Baja      |
 
+
+### 🚀 *Estado actual del proyecto*
+
+✅ Definición de Requisitos: Completamos las historias de usuario y casos de uso para entender las necesidades de los usuarios.
+
+✅ Diseño de Procesos (BPMN): Modelamos los flujos de trabajo con Bizagi para optimizar las interacciones.
+
+✅ Diseño de Arquitectura y Estructura: Definimos cómo se organizarán los componentes y datos de la aplicación.
+
+> `🚧 En progreso` Diseño de Interfaz y Experiencia (UI/UX): Actualmente estamos diseñando la app en Figma para una experiencia intuitiva y visualmente atractiva.
+
+> Modelado UML: Será nuestro siguiente paso para detallar la estructura y el comportamiento del sistema.
+
+> Desarrollo: Comenzaremos a programar una vez finalizadas las fases de diseño.
+
 ---
 
-## 🛠 *Roadmap Técnico*  
+### 🛠 *Roadmap Técnico*  
 
 | Componente              | Tecnología           | Responsable   | Hito                            |
 |-------------------------|----------------------|---------------|---------------------------------|
@@ -48,7 +65,7 @@
 
 ---
 
-## 📌 *Casos de Uso Principales*  
+### 📌 *Casos de Uso Principales*  
 ```mermaid
 flowchart TD
     A[Usuario se registra] --> B[Configura proyecto]
