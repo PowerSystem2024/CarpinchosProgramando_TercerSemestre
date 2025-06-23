@@ -15,10 +15,9 @@ function aleatorio(min, max){
 
 ## 2. Cuál es un código que se pueda utilizar para un botón Reiniciar en html:
 **Respuesa Correcta:** <br>
-**c.** Porque este código crea un botón al recargar la página.
+**a.**
 ```
-<button onclick="document.location.reload();">
-                 reset
+<a href="JavaScript:document.location.reload();">Reiniciar</a>
 ```
 <br>
 
