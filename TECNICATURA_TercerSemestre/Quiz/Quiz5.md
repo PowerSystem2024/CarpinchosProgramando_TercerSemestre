@@ -24,6 +24,6 @@
 
 <br>
 
-# 📸 Capturas
+# 📸 Capturas del envío
 
 ![WhatsApp Image 2025-06-19 at 21 30 10](https://github.com/user-attachments/assets/ccf965e8-96b3-454b-af7e-d7a5e57a9a23)
