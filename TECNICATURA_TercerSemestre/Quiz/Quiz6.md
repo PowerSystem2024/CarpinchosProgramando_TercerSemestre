@@ -22,6 +22,6 @@
 
 **b.** Estas variables son las únicas variables que pueden ser utilizadas en cada parte del código, sin limitaciones.
 
-# 📸 Capturas
+# 📸 Capturas del envío
 
 ![WhatsApp Image 2025-06-19 at 22 31 33](https://github.com/user-attachments/assets/9372dcc4-7944-42d6-a019-30feb65fc894)
