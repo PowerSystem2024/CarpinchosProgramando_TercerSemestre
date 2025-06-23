@@ -32,4 +32,6 @@
 **e.** La respuesta No esta en las opciones: Si es así escribe tu respuesta... <br><br>
 La ubicación más recomendada y eficiente para referenciar un archivo JavaScript externo es justo antes de la etiqueta de cierre `</body>`. Esto se debe a que el HTML se carga y renderiza primero, lo que permite que el usuario vea el contenido de la página más rápidamente. Si el script se coloca en el `<head>`, el navegador debe descargar y ejecutar el script antes de renderizar el cuerpo de la página, lo que puede causar un retraso perceptible en la carga.
 
+<br>
+
 # 📸 Capturas
