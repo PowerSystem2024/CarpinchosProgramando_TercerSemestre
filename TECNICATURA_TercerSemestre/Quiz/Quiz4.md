@@ -21,3 +21,4 @@ En HTML y JavaScript, `checked` se refiere al estado de un elemento de entrada (
 **Respuesta Correcta:** <br>
 **d.** Como buenas prácticas se recomienda crear variables a las que se le asigne este código y que NO vayan a ningún condicional de esta forma. <br><br>
 
+# 📸 Capturas
