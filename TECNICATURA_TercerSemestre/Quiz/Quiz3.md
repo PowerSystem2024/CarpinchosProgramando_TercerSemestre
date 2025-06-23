@@ -34,4 +34,4 @@ La ubicación más recomendada y eficiente para referenciar un archivo JavaScrip
 
 <br>
 
-# 📸 Capturas
+# 📸 Capturas del envío
