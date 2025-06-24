@@ -1,12 +1,14 @@
-from  logger_base import log
+from  logger_base import log # Importa el logger definido en logger_base.py
 class Persona:
     def __init__(self, id_persona=None, nombre=None, apellido=None, email=None):
+        # Constructor con parámetros opcionales
         self._id_persona = id_persona
         self._nombre = nombre
         self._apellido = apellido
         self._email = email
 
     def __str__(self):
+        # Representación en texto del objeto
         return f'''
             Id Persona: {self._id_persona},
             Nombre: {self._nombre},
@@ -47,9 +49,9 @@ class Persona:
         self._email = email
 
 if __name__=='__main__':
-    persona1 = Persona(1, 'Juan', 'Perez', 'jperez@gmail.com')
+    persona1 = Persona(1, 'Juan', 'Perez', 'jperez@gmail.com') # Crea un objeto Persona con todos los datos
     log.debug(persona1)
     persona2 = Persona(nombre='Mari', apellido='Salgado',email='marisal@gmail.com')
     log.debug(persona2)
-    persona1 = Persona(id_persona=1)
+    persona1 = Persona(id_persona=1)  # Solo asigna id_persona
     log.debug(persona1)

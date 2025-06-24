@@ -1,6 +1,6 @@
-from capas_datos_persona.Persona import Persona
-from capas_datos_persona.conexion import Conexion
-from logger_base import log
+from capas_datos_persona.Persona import Persona # Importa la clase Persona
+from capas_datos_persona.conexion import Conexion # Importa la clase que gestiona el pool de conexiones
+from logger_base import log # Importa el logger para registrar eventos y depuración
 
 class PersonaDAO:
     """
@@ -11,24 +11,28 @@ class PersonaDAO:
                     Update -> Actualizar
                     Delete -> Eliminar
     """
+    # Sentencias SQL
     _SELECCIONAR = 'SELECT * FROM persona ORDER BY id_persona'
     _INSERTAR = 'INSERT INTO persona(nombre, apellido, email) VALUES (%s, %s, %s)'
     _ACTUALIZAR = 'Update persona SET nombre=%s, apellido=%s, email=%s WHERE id_persona=%s'
     _ELIMINAR = 'DELETE FROM persona WHERE id_persona=%s'
 
     # Definimos los métodos de clase
+    # Método para consultar todos los registros
     @classmethod
     def seleccionar(cls):
-        with Conexion.obtenerConexion():
-            with Conexion.obtenerCursor() as cursor:
+        with Conexion.obtenerConexion(): # Obtiene una conexión del pool
+            with Conexion.obtenerCursor() as cursor: # Obtiene un cursor para ejecutar sentencias SQL
                 cursor.execute(cls._SELECCIONAR)
-                registros = cursor.fetchall()
+                registros = cursor.fetchall()  # Recupera todos los registros de la consulta
                 personas = [] #creamos una lista
                 for registro in registros:
+                    # Crea objetos Persona con los datos recuperados
                     persona = Persona(registro[0],registro[1],registro[2],registro[3])
                     personas.append(persona)
                 return personas
 
+    # Método para insertar un nuevo registro
     @classmethod
     def insertar(cls, persona):
         with Conexion.obtenerConexion():
@@ -36,7 +40,9 @@ class PersonaDAO:
                 valores = (persona.nombre, persona.apellido, persona.email)
                 cursor.execute(cls._INSERTAR, valores)
                 log.debug(f'Persona insertada: {persona}')
-                return cursor.rowcount
+                return cursor.rowcount  # Retorna el número de registros insertados
+
+    # Método para actualizar un registro existente
     @classmethod
     def actualizar(cls, persona):
         with Conexion.obtenerConexion():
@@ -44,7 +50,9 @@ class PersonaDAO:
                 valores = (persona.nombre, persona.apellido, persona.email, persona.id_persona)
                 cursor.execute(cls._ACTUALIZAR, valores)
                 log.debug(f'Persona actualizada: {persona}')
-                return cursor.rowcount
+                return cursor.rowcount  # Retorna el número de registros actualizados
+
+    # Método para eliminar un registro
     @classmethod
     def eliminar(cls,persona):
         with Conexion.obtenerConexion():
@@ -73,7 +81,7 @@ if __name__== '__main__':
     # log.debug(f'Personas insertadas: {personas_insertadas}')
 
 
-    # Seleccionar objetos
+    # Seleccionar objetos/registros
     personas = PersonaDAO.seleccionar()
     for persona in personas:
         log.debug(persona)
