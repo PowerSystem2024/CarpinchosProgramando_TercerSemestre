@@ -35,3 +35,5 @@ La ubicación más recomendada y eficiente para referenciar un archivo JavaScrip
 <br>
 
 # 📸 Capturas del envío
+![WhatsApp Image 2025-06-24 at 17 29 40](https://github.com/user-attachments/assets/3e2fee27-5286-4b11-9d5d-104df8d7e1df)
+![WhatsApp Image 2025-06-24 at 17 29 59](https://github.com/user-attachments/assets/c68bdfb1-a62d-4f9d-aa9e-d67f86859409)
