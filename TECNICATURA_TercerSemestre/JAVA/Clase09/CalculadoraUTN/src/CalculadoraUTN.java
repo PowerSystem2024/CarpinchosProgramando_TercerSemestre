@@ -67,7 +67,6 @@ public class CalculadoraUTN {
             }
             // División
             case 4 -> {
-                // División
                     if (operando2 == 0) {
                         System.out.println("Error: No es posible dividir entre cero.");
                     } else {
