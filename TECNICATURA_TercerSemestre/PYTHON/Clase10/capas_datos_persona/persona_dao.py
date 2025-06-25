@@ -1,5 +1,5 @@
-from capas_datos_persona.Persona import Persona # Importa la clase Persona
-from capas_datos_persona.conexion import Conexion # Importa la clase que gestiona el pool de conexiones
+from Persona import Persona # Importa la clase Persona
+from conexion import Conexion # Importa la clase que gestiona el pool de conexiones
 from logger_base import log # Importa el logger para registrar eventos y depuración
 
 class PersonaDAO:
@@ -67,7 +67,7 @@ if __name__== '__main__':
     # Eliminar un registro
     # persona1 = Persona(id_persona=14)
     # personas_eliminadas = PersonaDAO.eliminar(persona1)
-    # log.debug(f'Personas elimiadas: {personas_eliminadas}')
+    # log.debug(f'Personas eliminadas: {personas_eliminadas}')
 
     # Actualizar un registro
     # persona1 = Persona(1, 'Juan José', 'Pena', 'jjpena@gmail.com')

@@ -42,12 +42,26 @@ class Conexion:
                 sys.exit() # Finaliza el programa si no puede crear el pool
         else:
             return cls._pool
+
+    @classmethod
+    def liberarConexion(cls, conexion):
+        cls.obtenerPool().putconn(conexion) # este método se encarga de regresar una conexión hacia la bdd
+        log.debug(f'Libero la conexión: {conexion}')
+
+    @classmethod
+    def cerrarConexiones(cls):
+        cls.obtenerPool().closeall() # este método se encarga de regresar una conexión hacia la bdd
+        log.debug(f'El pool de conexiones se cerro correctamente')
+
 # Prueba
 if __name__== '__main__':
     # Solicita varias conexiones del pool para probar el funcionamiento
     conexion1 = Conexion.obtenerConexion()
+    Conexion.liberarConexion(conexion1)  # libera la conexión1
     conexion2 = Conexion.obtenerConexion()
+    Conexion.liberarConexion(conexion2)  # libera la conexión2
     conexion3 = Conexion.obtenerConexion()
+    Conexion.liberarConexion(conexion3)  # libera la conexión3
     conexion4 = Conexion.obtenerConexion()
     conexion5 = Conexion.obtenerConexion()
-    # conexion6 = Conexion.obtenerConexion() # nos excedemos en una conexión
+    conexion6 = Conexion.obtenerConexion() # nos excedemos en una conexión
