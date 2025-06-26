@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Viva</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./codigo.js" defer></script>
+    </head>
+    <body>
+    <section>
+        <!-- Efectos de fondo difuminados -->
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+
+        <!-- Cuadrados animados -->
+        <div class="box">
+        <div class="square" style="--i: 0"></div>
+        <div class="square" style="--i: 1"></div>
+        </div>
+
+        <!-- Contenedor principal -->
+        <div class="container">
+        <div class="form">
+            <h2>Login Form</h2>
+            <form>
+            <div class="inputBox">
+                <input type="text" placeholder="Username" required />
+            </div>
+            <div class="inputBox">
+                <input type="password" placeholder="Password" required />
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Login" />
+            </div>
+            <p class="forget">
+                ¿Olvidaste tu contraseña?
+                <a href="#">Click aquí</a>
+            </p>
+            <p class="forget">
+                ¿No tienes cuenta?
+                <a href="#">Regístrate</a>
+            </p>
+            </form>
+        </div>
+        </div>
+    </section>
+    </body>
+</html>
